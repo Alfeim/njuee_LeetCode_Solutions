@@ -1,4 +1,5 @@
-# 本项目主要记录平时刷LeetCode的通过提交与思路以及一些经典题解
+# 本项目主要记录平时刷LeetCode的submit与及一些经典题解
 
-#Cpp文件夹下主要为本人提交记录
-#Leukart文件夹下为合作者Leukart的提交记录
+Cpp文件夹下主要为本人提交记录
+
+Leukart文件夹下为合作者Leukart的提交记录
