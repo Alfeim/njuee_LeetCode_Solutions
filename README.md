@@ -1,5 +1,6 @@
 # 本项目为Njueers所共享
-# 主要记录平时刷题的submit与经典题解、coding时所作笔记
+
+仓库内容主要为平时刷题的submit、遇到的一些经典题解、coding时所作的笔记等
 
 Basic Knowledge文件夹下为一些基础但相对重要的C++知识点/笔记
 
