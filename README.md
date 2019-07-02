@@ -1,4 +1,4 @@
-# 本项目主要记录平时刷LeetCode的submit与及一些经典题解
+# 本项目为Njueers所共享主要记录平时刷题的submit与经典题解、coding时所作笔记
 
 Basic Knowledge文件夹下为一些基础但相对重要的C++知识点/笔记
 
