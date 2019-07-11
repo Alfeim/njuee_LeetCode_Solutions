@@ -14,3 +14,9 @@ Leukart文件夹下为合作者Leukart的提交记录
 2019/07/06 新增 164. Maximum Gap,如果对排序时间复杂度要求为O(N),考虑空换时的方式,典型代表为桶排序
 
 2019/07/10 新增 214. Shortest Palindrome,为了满足时间复杂度要求,这里求回文串使用Manacher算法
+
+2019/07/11 新增 224. Basic Calculator,求表达式的值,一般思路是把常规的“中缀表达式”转换为“逆波兰式”(后缀表达式),然后计算(用栈很方便)
+转换方法可见:https://oi-wiki.org/basic/expression/
+
+2019/07/11 新增 229. Majority Element II,类似求一个数组中,超过一定重复次数的数,可以考虑摩尔投票算法
+
