@@ -20,5 +20,7 @@ Leukart文件夹下为合作者Leukart的提交记录
 
 2019/07/11 新增 229. Majority Element II,类似求一个数组中,超过一定重复次数的数,可以考虑摩尔投票算法
 
-2019/07/17 新增 307.307. Range Sum Query - Mutable,在求解类似动态连续区间问题时,树状数组和线段树十分高效,相关内容见:https://www.cnblogs.com/TenosDoIt/p/3453089.html(线段树)      https://www.cnblogs.com/xenny/p/9739600.html(树状数组)
+2019/07/17 新增 307. Range Sum Query - Mutable,在求解类似动态连续区间问题时,树状数组和线段树十分高效,相关内容见:https://www.cnblogs.com/TenosDoIt/p/3453089.html(线段树)      https://www.cnblogs.com/xenny/p/9739600.html(树状数组)
+
+2019/07/23 新增 382. Linked List Random Node,在求很大状态空间数据的随机抽样问题时,可以利用蓄水池抽样法,见https://www.jianshu.com/p/7a9ea6ece2af
 
