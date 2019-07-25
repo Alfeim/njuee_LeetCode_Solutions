@@ -24,3 +24,6 @@ Leukart文件夹下为合作者Leukart的提交记录
 
 2019/07/23 新增 382. Linked List Random Node,在求很大状态空间数据的随机抽样问题时,可以利用蓄水池抽样法,见https://www.jianshu.com/p/7a9ea6ece2af
 
+2019/07/25 新增363. Max Sum of Rectangle No Larger Than K,求解矩阵的最大区域和类型问题可以参考
+https://www.cnblogs.com/huashanqingzhu/p/8684624.html
+
