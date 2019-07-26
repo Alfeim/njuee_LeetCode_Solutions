@@ -1,49 +1,52 @@
 /********************************************
 作者:Alfeim
 题目:O(1)时间插入、删除和获取随机元素
-时间消耗:112ms
-解题思路:利用map自动排序以及一个vector容器可以
-达到均摊时间O(1)
+时间消耗:88ms
+解题思路:利用哈希表
 ********************************************/
-class Solution {
+class RandomizedCollection {
 public:
-    bitset<10> Bits;
-    vector<string> res;
-    vector<string> readBinaryWatch(int num) {
-        Solve(0,num);
-        return res;
-    }
-    
-    void Solve(int begin,int left){
-        if(left == 0){
-            string tmp = Bits.to_string();
-            bitset<4> hours(tmp);
-            bitset<6> minute(tmp.substr(4));
-            int front = hours.to_ulong();
-            int back = minute.to_ulong();
-            if(front <= 11 && back <= 59){
-                string m;
-                string h = to_string(front);
-                
-                if(back < 10)
-                    m = "0" + to_string(back);
-                else
-                    m = to_string(back);
-                res.push_back(h + ":" + m);
-            }
-        }
-        
-        if(begin >= 10)
-            return;
-        
-        
-        for(int i = begin ; i < 10 ;++i){
-            Bits[i] = 1;
-            Solve(i+1,left-1);
-            Bits[i] = 0;
-        }
+    /** Initialize your data structure here. */
+    RandomizedCollection() {
         
     }
     
+    /** Inserts a value to the collection. Returns true if the collection did not already contain the specified element. */
+    bool insert(int val) {
+        int n = container.size();
+        container.push_back(val);
+        record[val].insert(n);
+        return record[val].size() == 1;
+    }
     
+    /** Removes a value from the collection. Returns true if the collection contained the specified element. */
+    bool remove(int val) {
+        if(record[val].empty())
+            return false;
+        
+        int n = container.size();
+        int cur_pos = *(record[val].begin());
+        record[val].erase(cur_pos);
+        
+        if(cur_pos != n - 1){
+            int last_elem = container.back();
+            container[cur_pos] = last_elem;
+            record[last_elem].erase(n-1);
+            record[last_elem].insert(cur_pos);
+        }
+        
+        container.pop_back();
+        return true;
+        
+    }
+    
+    /** Get a random element from the collection. */
+    int getRandom() {
+        return container[rand()%container.size()];   
+    }
+    
+private:
+    unordered_map<int,unordered_set<int>> record;
+    vector<int> container;
 };
+
