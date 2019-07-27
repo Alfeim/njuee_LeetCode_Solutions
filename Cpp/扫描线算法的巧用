@@ -1,0 +1,11 @@
+扫描线算法被广泛应用于计算图形学中,当我们遇到几何相关的问题时,不妨考虑一下扫描线算法
+
+几个经典例子包括
+
+1.LeetCode 219.天际线问题 https://leetcode-cn.com/problems/the-skyline-problem/solution/218tian-ji-xian-wen-ti-sao-miao-xian-fa-by-ivan_al/
+
+2.矩形的并集面积  https://blog.csdn.net/a_forever_dream/article/details/89310818
+
+3.最近的点 https://blog.csdn.net/LiRewriter/article/details/77512370
+
+一般考虑用BST之类的容器来维护数据、直接用如SET(底层是红黑树)的容器也是很常见的
