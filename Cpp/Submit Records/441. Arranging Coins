@@ -1,0 +1,19 @@
+/********************************************
+作者:Alfeim
+题目:排列硬币
+时间消耗:12ms
+解题思路:数学
+********************************************/
+class Solution {
+public:
+    int arrangeCoins(int n) {
+       long low_border = sqrt(2*(long)n) - 1;
+       long high_border = sqrt(2*(long)n);  
+    }
+    
+    long Solve(int level){
+        long tmp = (long)(level + 1) * (long)level ;
+        return tmp >> 1;
+    }
+    
+};
