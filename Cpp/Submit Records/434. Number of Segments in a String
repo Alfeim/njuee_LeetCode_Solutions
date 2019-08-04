@@ -1,0 +1,23 @@
+/********************************************
+作者:Alfeim
+题目:字符串中的单词数目
+时间消耗:0ms
+解题思路:..过于简单
+********************************************/
+class Solution {
+public:
+    int countSegments(string s) {
+        int res = 0;
+        int n = s.size();
+        for(int i = 0 ; i < n ;){
+            if(s[i] == ' '){
+                i++;
+                continue;
+            }else{
+                res++;
+                while( i < n && s[i] != ' ') i++; 
+            }
+        }
+        return res;
+    }
+};
