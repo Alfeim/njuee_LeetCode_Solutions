@@ -1,7 +1,8 @@
 /********************************************
 作者:Alfeim
 题目:LFU缓存
-尚未过AC 待填坑
+时间消耗:340ms
+解题思路:双向链表 + 哈希表
 ********************************************/
 class LFUCache {
 public:
@@ -11,8 +12,7 @@ public:
         buckets *next;
         list<int> keys;   
         buckets():freq(0),prev(nullptr),next(nullptr){};    //默认构造
-        buckets(int f):freq(f){};                           //带参构造,实际f也只能为1
-        ~buckets(){};                                       //默认析构
+        buckets(int f):freq(f){};                           //带参构造,实际f也只能为1                                
     };
     
     LFUCache(int capacity):Capacity(capacity){
@@ -31,10 +31,13 @@ public:
     
     */
     int get(int key){
+        if(Capacity == 0)
+            return - 1;
+        
         if(values.count(key) == 0)
             return -1;
         
-        update(key);
+        update(key,values[key]);
         return values[key];
     }
     
@@ -51,12 +54,13 @@ public:
     */
     
     void put(int key, int value) {
-        if(values.count(key) == 0){           //如果不存在该元素，执行插入    
+        if( values.count(key) == 0){           //如果不存在该元素，执行插入    
             if(values.size() >= Capacity)     //如果当前容量超过最大容量,执行删除
                 remove_from_head();
+            
             insert(key,value);                //插入新元素  
         }else{
-             update(key);                     //如果该元素已经存在,就更新
+            update(key,value);                     //如果该元素已经存在,就更新
         }
     }
     
@@ -79,8 +83,9 @@ public:
             keyFreq.erase(todelete);
             if(head->next->keys.empty()){                
                  Freq.erase(head->next->freq);
-                 head->next = head->next->next;
+                 
                  head->next->next->prev = head;
+                 head->next = head->next->next;
             }
         }
     }
@@ -130,9 +135,8 @@ public:
     
     */
 
-    void update(int key){
+    void update(int key,int value){
         buckets* cur = Freq[keyFreq[key]];   
-        remove_key_from_bucket(cur,key);    
         buckets *newbucket;          
         if(Freq.count(cur->freq + 1) == 0){   
             newbucket = new buckets();
@@ -145,8 +149,10 @@ public:
         }else{
             newbucket = Freq[cur->freq + 1];     
         }
+        remove_key_from_bucket(cur,key);    
         newbucket->keys.push_front(key);              
-        keyFreq[key] = newbucket->freq ;                      
+        keyFreq[key] = newbucket->freq ;
+        values[key] = value;
     }
     
      /*
