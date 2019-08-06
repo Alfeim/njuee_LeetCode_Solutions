@@ -33,3 +33,5 @@ https://www.cnblogs.com/huashanqingzhu/p/8684624.html
 
 2019/08/05 吔*啦 梁非凡！
 
+2019/08/06 新增478. Generate Random Point in a Circle 一道典型的拒绝采样的应用.其思想是要在限制条件内随机采样,只需要先随机采样再判断是否满足限制条件即可,如果不满足就重新再采
+
