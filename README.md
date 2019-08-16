@@ -37,4 +37,6 @@ https://www.cnblogs.com/huashanqingzhu/p/8684624.html
 
 2019/08/09 新增480. Sliding Window Median 很多情况下,中位数问题都可以用大小堆来做.只需要维护小顶堆的元素个数不少于大堆的元素个数,也不必大堆的元素个数多1以上即可.
 
-2049/08/14 新增493. Reverse Pairs 类似逆序对的问题(即first的下标小于second的小标但是满足first的条件优于second的条件),都可以用分治(类似归并排序)的方法来做
+2019/08/14 新增493. Reverse Pairs 类似逆序对的问题(即first的下标小于second的小标但是满足first的条件优于second的条件),都可以用分治(类似归并排序)的方法来做
+
+2019/08/16 更新《动态规划问题集合》,新增比较典型的  542. 01 Matrix 与 514. Freedom Trail
