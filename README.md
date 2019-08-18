@@ -40,3 +40,5 @@ https://www.cnblogs.com/huashanqingzhu/p/8684624.html
 2019/08/14 新增493. Reverse Pairs 类似逆序对的问题(即first的下标小于second的小标但是满足first的条件优于second的条件),都可以用分治(类似归并排序)的方法来做
 
 2019/08/16 更新《动态规划问题集合》,新增比较典型的  542. 01 Matrix 与 514. Freedom Trail
+
+2019/08/18 新增496. Next Greater Element.cpp ; 类似地,要找右边比当前元素大的第一个元素使用递减栈,反之,如果时第一个更小的元素则用递增栈 
