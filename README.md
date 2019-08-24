@@ -47,3 +47,5 @@ https://www.cnblogs.com/huashanqingzhu/p/8684624.html
 小写变大写、大写变大写  :  字符 &= -33;
 
 2019/08/23 更新《动态规划问题集合》,新增600. Non-negative Integers without Consecutive Ones
+
+2019/08/24 新增629. K Inverse Pairs Array,需要注意的是,这种因为结果很大要对一个大数取模的题,应当先加上模的值再取模防止出现负数!
