@@ -1,0 +1,71 @@
+/********************************************
+作者:Alfeim
+题目:二叉树的最大宽度
+时间消耗:4ms
+解题思路:dfs或者bfs为了防止越界使用unsigned long long
+********************************************/
+
+//dfs
+class Solution {
+public:
+    unordered_map<int,int> left;
+    unordered_map<int,int> right;
+    int res;
+    int widthOfBinaryTree(TreeNode* root) {
+        res = 0;
+        Solve(root,1,0);
+        return res;
+    }
+    
+    void Solve(TreeNode* root,int level,unsigned long long pos){
+        if(!root) return;
+        
+        if(left.count(level) == 0) 
+            left[level] = pos;
+        else{
+            if(pos < left[level]) left[level] = pos;
+        }
+            
+        if(right.count(level) == 0) 
+            right[level] = pos;
+        else{
+            if(pos > right[level]) right[level] = pos;
+        }
+        res = max(right[level] - left[level] + 1,res);
+        Solve(root->left,level+1,pos*2);
+        Solve(root->right,level+1,pos*2+1);
+    }
+    
+    
+};
+
+
+//bfs
+class Solution {
+public:
+    queue<pair<TreeNode*,unsigned long long>> Q;
+    int widthOfBinaryTree(TreeNode* root) {
+        if(!root) return 0;
+        unsigned long long res = 0,left = 0,right = 0;
+        Q.push(make_pair(root,0));
+        while(!Q.empty()){
+            int size = Q.size();
+            int count = 0;
+            while(count < size){
+                count++;
+                auto cur = Q.front();
+                Q.pop();
+                unsigned long long pos = cur.second;
+                
+                if(count == 1) left = pos;
+                if(count == size) right = pos;
+                
+                auto node = cur.first;
+                if(node->left) Q.push(make_pair(node->left,pos*2));
+                if(node->right) Q.push(make_pair(node->right,pos*2+1));  
+            }        
+            res = max(right - left + 1,res);
+        }
+        return res;
+    }
+};
