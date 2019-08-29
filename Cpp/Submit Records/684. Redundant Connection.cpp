@@ -1,9 +1,72 @@
 /********************************************
 作者:Alfeim
 题目:冗余链接
-时间消耗:56ms
+时间消耗:8ms/56ms
 解题思路:查找并集/dfs
 ********************************************/
+//DSU(查找并集)方法
+class Solution {
+public:
+    struct UnionFind{
+        int Len;
+        vector<int> parents;
+        vector<int> rank;
+        UnionFind(int Lenth):Len(Lenth),parents(Lenth+1,0),rank(Lenth+1,1){
+            for(int i = 1 ; i <= Len ; ++i){
+                parents[i] = i;
+            }
+        };
+        
+        int find(int x){
+            if(x == parents[x]) return x;
+            return find(parents[x]);
+        }
+        
+        void merge(int x,int y){
+            int _x = find(x);
+            int _y = find(y);
+            
+            if(_x == _y) return;
+            
+            if(rank[_x] > rank[_y])
+                parents[_y] = _x;
+            else if(rank[_y] > rank[_x])
+                parents[_x] = _y;
+            else{
+                parents[_y] = x;
+                rank[_x] += 1;
+            }
+            
+            return;
+        }
+        
+    };
+    
+    vector<int> findRedundantConnection(vector<vector<int>>& edges) {
+        vector<int> res(2,0);
+        int n = edges.size();
+        UnionFind DSU(n);
+        DSU.merge(edges[0][0],edges[0][1]);
+
+        for(int i = 1 ; i < n ; ++i){
+            int first = DSU.find(edges[i][0]);
+            int second = DSU.find(edges[i][1]);
+            if(first > second) swap(first,second);
+            if(first == second){
+                res[0] = edges[i][0];
+                res[1] = edges[i][1];
+            }else{
+                DSU.merge(edges[i][0],edges[i][1]);
+            }
+            
+        }
+        
+        return res;
+        
+    }
+  
+};
+
 
 //dfs方法
 class Solution {
