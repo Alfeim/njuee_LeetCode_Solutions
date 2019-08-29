@@ -49,3 +49,5 @@ https://www.cnblogs.com/huashanqingzhu/p/8684624.html
 2019/08/23 更新《动态规划问题集合》,新增600. Non-negative Integers without Consecutive Ones
 
 2019/08/24 新增629. K Inverse Pairs Array,需要注意的是,这种因为结果很大要对一个大数取模的题,应当先加上模的值再取模防止出现负数!
+
+2019/08/29 新增684. Redundant Connection,本体使用了一种巧妙的数据结构(DSU)用于查找并集,该结构主要包含两个方法:find(查找公共祖先)和merge(合并两个分支).同时维护一个数组parents[i]记录i节点的父元素.而祖先节点的父元素即是本身.为了简化复杂度,使用了按秩合并的方法,即用rank[i]表示i节点的孩子量级,每次合并时总是让小的量级作为大量级的孩子.
