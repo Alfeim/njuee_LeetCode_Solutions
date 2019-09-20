@@ -57,3 +57,5 @@ https://www.cnblogs.com/huashanqingzhu/p/8684624.html
 2019/09/10 更新《设计模式笔记》,新增工厂方法模式
 
 2019/09/17 更新《动态规划问题集合》,新增741.摘樱桃
+
+2019/09/20 新增858. Mirror Reflection.cpp 一道很有意思的数学类题目
