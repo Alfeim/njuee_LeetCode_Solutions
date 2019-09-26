@@ -61,3 +61,5 @@ https://www.cnblogs.com/huashanqingzhu/p/8684624.html
 2019/09/20 新增858. Mirror Reflection.cpp 一道很有意思的数学类题目
 
 2019/09/25 新增898. Bitwise ORs of Subarrays 一道利用整型数值性质的题目  新增894. All Possible Full Binary Trees 比较经典的递归题目
+
+2019/09/26 更新《设计模式笔记》 新增单例模式
