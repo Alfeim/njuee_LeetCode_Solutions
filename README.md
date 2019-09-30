@@ -65,3 +65,5 @@ https://www.cnblogs.com/huashanqingzhu/p/8684624.html
 2019/09/26 更新《设计模式笔记》 新增单例模式
 
 2019/09/28 更新《动态规划问题集合》 新增918. Maximum Sum Circular Subarray
+
+2019/09/30 更新《动态规划问题集合》 新增818. Race Car
