@@ -75,3 +75,5 @@ https://www.cnblogs.com/huashanqingzhu/p/8684624.html
 2019/10/07 新增850. Rectangle Area II 一道经典的扫描线算法题
 
 2019/10/08 更新《设计模式笔记》 新增命令模式
+
+2019/10/09 新增 864. Shortest Path to Get All Keys 当遇到可重复路径的BFS时,需要额外开辟一个空间维度来存储状态，以避免状态重复尾条件进行剪枝
