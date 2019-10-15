@@ -81,3 +81,5 @@ https://www.cnblogs.com/huashanqingzhu/p/8684624.html
 2019/10/10 更新《设计模式笔记》 新增适配器模式和外观模式
 
 2019/10/13 更新《动态规划问题集合》 新增 87. Super Egg Drop ，这是一道非常经典的DP问题，值得多多琢磨
+
+2019/10/15 更新《动态规划问题集合》 新增 903. Valid Permutations for DI Sequence 
