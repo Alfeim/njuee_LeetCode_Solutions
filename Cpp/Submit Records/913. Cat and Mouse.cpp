@@ -1,8 +1,8 @@
 /********************************************
 作者:Alfeim
-题目:搜索旋转排序数组
-时间消耗:12ms
-解题思路:回溯、二分查找
+题目:猫和老鼠
+时间消耗:108ms
+解题思路:BFS
 相似题目：
 参考:https://leetcode-cn.com/problems/cat-and-mouse/solution/bu-liao-jie-ji-da-ji-xiao-suan-fa-ke-yi-tong-guo-b/
 
